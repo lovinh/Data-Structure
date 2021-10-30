@@ -1,17 +1,20 @@
 #include <bits/stdc++.h>
-#include "StackLib.cpp"
+#include "nStackLib.cpp"
 using namespace std;
 int main(int argc, char const *argv[])
 {
-    StackLib<int> s;
-    s.push(1); // 1
-    s.push(2); // 1 2
-    s.push(3); // 1 2 3
-    s.push(4); // 1 2 3 4
-    s.push(5); // 1 2 3 4 5
+    nStackLib<int> s;
+    s.push(1);
     cout << s.top() << endl;
-    int len = s.size();
-    while (len--)
+    s.push(2);
+    cout << s.top() << endl;
+    s.push(3);
+    cout << s.top() << endl;
+    s.push(4);
+    cout << s.top() << endl;
+    s.push(5);
+    cout << s.top() << endl;
+    while (s.empty())
     {
         cout << s.pop() << " ";
     }
